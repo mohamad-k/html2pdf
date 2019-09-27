@@ -1,0 +1,493 @@
+<!doctype>
+<html>
+<head>
+    <title>jsPDF</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style>
+		/* @CHARSET "UTF-8"; */
+		/* .page-break {
+			page-break-after: always;
+			page-break-inside: avoid;
+			clear:both;
+		}
+		.page-break-before {
+			page-break-before: always;
+			page-break-inside: avoid;
+			clear:both;
+		} */
+	</style>
+<script src='dist/jspdf.min.js'></script>
+<script src='dist/jspdf.debug.js'></script>
+<!-- <script src='dist/jspdf.plugin.autotable.min.js'></script> -->
+<script src='./html2canvas.js'></script>
+
+ </head>
+<body>
+	<!-- <button onclick="generate()">Generate PDF</button> -->
+<div id="html-2-pdfwrapper" >
+	<div class="migrationBody" id="migration" style="width: 40%; padding:50px">
+		<table border="1">
+			<tbody align="left">
+				<tr valign="top">
+					<td style="background-color: #82c0ff;" width="471">
+					<p><b>Aufgaben </b></p>
+					</td>
+					<td style="background-color: #82c0ff;" width="151"><b>Hinweise </b></td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<ul >
+						<li type="disc">Allgemeines</li>
+					</ul>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Mitarbeiter, die mit der Vergabe von Immobiliar-Verbraucherdarlehen befasst sind, müssen über angemessene Kenntnisse / Sachkunde verfügen</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">§18a Abs. 6 KWG</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Diese Kenntnisse und Fähigkeiten müssen auf einem aktuellen Stand gehalten werden:</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">anlassbezogene Kommunikation von gesetzlichen Neuerungen und relevanter Rechtsprechung bzw. sich hieraus ergebender Vorgaben an die mit der Vergabe von IVD befassten Mitarbeiter durch den Fachbereich</li>
+					</ul>
+					</div>
+					</div>
+					</td>
+					<td width="151">Verantwortlich: Kreditsekretariat</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">ggf. individuelle Schulungsmaßnahmen für die betroffenen Bereiche (siehe auch "Betroffene Stellen gem. Stellenplan") durchführen</li>
+					</ul>
+					</div>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">&#160;</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<ul>
+						<li type="disc">Sachkundenachweis</li>
+					</ul>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Sachkundenachweis ist erbracht, wenn Berufsqualifikation "Bank- oder Sparkassenkaufmann" bzw. "Bank- oder Sparkassenfachwirt" vorliegt</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">§ 2 ImmoKredit- SachkundeAnfV</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">in Zweifelsfällen Kreditsekretariat bzgl. Sachkundeeinstufung einbinden</li>
+					</ul>
+					</div>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">&#160;</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<ul>
+						<li type="disc">Betroffene Stellen gem. Stellenplan</li>
+					</ul>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Firmenkundenabteilung</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Abteilungsleitung, Sonderbetreuung, F0/F1-Betreuung, F2-Betreuung, F3-Betreuung, Assistenzstellen, Traineestellen</li>
+					</ul>
+					</div>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Marktfolge Kredit</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Abteilungsleitung, Sachbearbeiter Marktfolge Kredit, Analysten Marktfolge Kredit</li>
+					</ul>
+					</div>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Kreditsekretariat</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Abteilungsleitung, Sachbearbeiter (alle Sachgebiete)</li>
+					</ul>
+					</div>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Verbundabteilung</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Abteilungsleitung, Sachbearbeiter Verbund (für Wohnungsbau)</li>
+					</ul>
+					</div>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Versicherung und Bausparen</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Spezialist Bausparen</li>
+					</ul>
+					</div>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Wohnungsbaufinanzierung</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Teamleiter, Wohnungsbauspezialisten</li>
+					</ul>
+					</div>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Kreditmanagement</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Abteilungsleitung, Sanierer</li>
+					</ul>
+					</div>
+					</div>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">&#160;</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<ul>
+						<li type="disc">Vorgehensweise bei Versetzungen</li>
+					</ul>
+					</td>
+					<td width="151">&#160;</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">
+					<div style="margin-left: 20px;">
+					<ul>
+						<li type="disc">Prüfung und Dokumentation der Sachkunde im Rahmen des Personalbeschlusses</li>
+					</ul>
+					</div>
+					</td>
+					<td width="151">Personalabteilung</td>
+				</tr>
+				<tr valign="top">
+					<td width="471">&#160;</td>
+					<td width="151">&#160;</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		
+</div>
+<a  onclick="genPDF()" >Download PDF</a>  
+
+<script>
+ function genPDF(){
+	//  console.log('weew');
+	// let nbPages = 3;
+    // let sourceHtml = document.getElementById('migration');
+
+    // // doc html2pdf: https://github.com/eKoopmans/html2pdf
+    // fromHTML(sourceHtml, {
+    //   margin: 1,
+    //   filename: 'test-' + DateUtils.generateTimeStamp() + '.pdf',
+    //   image: { type: 'jpg' },
+    //   html2canvas: { dpi: 192, letterRendering: true, width: 1024, height: 1448 * nbPages },
+    //   jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
+    // });
+
+
+	html2canvas(document.getElementById('migration'), {
+		dpi:300, 
+		scale: 3,
+  onrendered:function(canvas) {
+      var contentWidth = canvas.width;
+      var contentHeight = canvas.height ;
+      var pageHeight = contentWidth / 592.28 * 841.89;
+      var leftHeight = contentHeight;
+      var position = 0;
+      var imgWidth = 595.28;
+      var imgHeight = 592.28/contentWidth * contentHeight;
+      var pageData = canvas.toDataURL('image/png', 1.0);
+	  var pdf = new jsPDF('p', 'pt', 'a4');
+	  console.log(pdf)
+      if (leftHeight < pageHeight) {
+      pdf.addImage(pageData, 'JPEG', 50, 20, imgWidth, imgHeight );
+      } else {
+          while(leftHeight > 0) {
+			
+              pdf.addImage(pageData, 'JPEG', 50, position, imgWidth, imgHeight )
+              leftHeight -= pageHeight;
+			  position -= 841.89;
+	  var pageCount = pdf.internal.getNumberOfPages();
+			  
+			  for(i = 0; i < pageCount; i++) { 
+				pdf.setPage(i); 
+				var str =  pdf.internal.getCurrentPageInfo().pageNumber + " / " + pageCount;
+				pdf.setFontSize(10);
+				pdf.setFont('helvetica')
+				pdf.setFontType('normal')
+    			pdf.text(str, 550, pdf.internal.pageSize.height - 20);
+
+
+				// pdf.setFont('courier')
+				// pdf.setFontType('normal')
+				// pdf.text(10,10, pdf.internal.getCurrentPageInfo().pageNumber + "/" + pageCount);
+		}
+              if(leftHeight > 0) {
+                pdf.addPage();
+              }
+          }
+	  }
+	  window.open(pdf.output('bloburl'))
+    //   pdf.save('content.pdf');
+  }
+})
+
+
+
+
+
+
+
+//    html2canvas(document.getElementById('migration'),{
+//    onrendered:function(canvas){
+
+//    var img=canvas.toDataURL("image/png");
+//    var doc = new jsPDF('p', 'pt', 'a4');
+// //    doc.html(document.body, {
+// 	//    callback: function (doc) {
+// //    doc.save('test.pdf');
+
+// 	//    }
+// //    })
+//    doc.addImage(img,'JPEG', 0, 0);
+//    doc.addPage()
+// //    doc.addImage(img,'JPEG',20,20);
+//    doc.save('test.pdf');
+//    }
+
+//    });
+
+  }
+
+
+
+
+
+
+
+
+var base64Img = null;
+// imgToBase64('octocat.jpg', function(base64) {
+//     base64Img = base64; 
+// });
+
+margins = {
+  top: 70,
+  bottom: 40,
+  left: 30,
+  width: 550
+};
+
+generate = function()
+{
+	var pdf = new jsPDF('p', 'pt', 'a4');
+	pdf.setFontSize(12);
+	// pdf.setFillColor()
+	pdf.fromHTML(document.getElementById('html-2-pdfwrapper'), 
+		margins.left, // x coord
+		margins.top,
+		{
+			// y coord
+			width: margins.width// max width of content on PDF
+		},function(dispose) {
+			headerFooterFormatting(pdf, pdf.internal.getNumberOfPages());
+		}, 
+		margins);
+		// pdf.setFillColor(204, 204,204,0);
+		window.open(pdf.output('bloburl'))
+		
+	// var iframe = document.createElement('iframe');
+	// iframe.setAttribute('style','position:absolute;right:0; top:0; bottom:0; height:100%; width:650px; padding:20px;');
+	// document.body.appendChild(iframe);
+	
+	// iframe.src = pdf.output('dataurlnewwindow');
+};
+function headerFooterFormatting(doc, totalPages)
+{
+    for(var i = totalPages; i >= 1; i--)
+    {
+        doc.setPage(i);                            
+        //header
+        header(doc);
+        
+        footer(doc, i, totalPages);
+        doc.page++;
+    }
+};
+
+function header(doc)
+{
+    doc.setFontSize(30);
+    doc.setTextColor(40);
+    doc.setFontStyle('normal');
+	
+    // if (base64Img) {
+    //    doc.addImage(base64Img, 'JPEG', margins.left, 10, 40,40);        
+    // }
+	    
+    doc.text("", margins.left + 50, 40 );
+	doc.setLineCap(2);
+	doc.line(3, 70, margins.width + 43,70); // horizontal line
+};
+function footer(doc, pageNumber, totalPages){
+
+    var str = "Page " + pageNumber + " of " + totalPages
+   
+    doc.setFontSize(10);
+    doc.text(str, margins.left, doc.internal.pageSize.height - 20);
+    
+};
+
+ </script>
+</body>
+</html>
